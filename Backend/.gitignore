@@ -1,2 +1,4 @@
 *.joblib
 myenv/
+$SongData/
+savedSongs/
