@@ -42,6 +42,7 @@ import {
                   type="file"
                   accept=".mp3"
                   onChange={handleFileChange}
+                  borderColor={"tomato"}
                 />
               </InputGroup>
               {fileName && <Text mt={2}>Selected file: {fileName}</Text>}
