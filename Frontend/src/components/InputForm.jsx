@@ -71,13 +71,21 @@ export default function InputForm() {
           </Button>
         </Stack>
       </form>
+      <p>Your Song:</p>
       {fileURL && <AudioPlayer fileURL={fileURL} />}
       {similarSongs.length > 0 && (
         <Box mt={4}>
           <Text>Similar Songs:</Text>
           <ul>
             {similarSongs.map((song, index) => (
-              <li key={index}>{song}</li>
+              <li key={index}>
+                {song}
+                <AudioPlayer
+                  fileURL={`http://localhost:5000/api/audio/${encodeURIComponent(
+                    song
+                  )}`}
+                />
+              </li>
             ))}
           </ul>
         </Box>
